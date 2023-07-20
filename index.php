@@ -132,19 +132,6 @@ $page="home";
     </div>
   </section>
 
-  <!-- <section class="u-section">
-  <div class="u-cw u-mb">
-      <h2 class="c-title_primary">コンテンツ幅</h2>
-      <div class="u-cw100">
-        ああああああ
-      </div>
-    </div>
-    <div class="u-cw_narrow">
-    <div class="u-cw100">
-        いいい
-      </div>
-    </div>
-  </section> -->
   <?php include_once("parts/cta.php"); ?>
 </main>
 <?php include_once("parts/footer.php"); ?>

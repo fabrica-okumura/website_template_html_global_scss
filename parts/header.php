@@ -53,7 +53,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="/css/app.min.css">
   <?php if($page=="home"): ?>
-  <link rel="stylesheet" href="css/index.min.css">
+  <link rel="stylesheet" href="css/home.min.css">
   <?php elseif($page=="form"): ?>
   <link rel="stylesheet" href="css/form.min.css">
   <?php endif; ?>

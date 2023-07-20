@@ -14,7 +14,7 @@ $page="home";
     </div>
   </section>
 
-  <p class="u-cw u-lh">記事一覧ページにサイドカラムレイアウト、grid、card、pager、パンくずを配置。お問い合わせページにフォームの各パーツを配置しています。</p>
+  <p class="u-cw u-lh"><a href="article.php">記事一覧ページ</a>にサイドカラムレイアウト、グリッド、カード、ページャー、パンくずリストを配置。<a href="form.php">お問い合わせページ</a>にフォームの各パーツを配置しています。</p>
 
   <section class="u-section" id="section_title">
     <div class="u-cw">

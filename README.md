@@ -1,5 +1,7 @@
 このリポジトリは、グローバルCSSを使用してウェブサイト開発を始めるための基本的なHTML、SASS、JavaScriptのファイルセットです。
 
+ブラウザでの表示確認は、https://web-template-html-global-scss.onrender.com/ にアクセスしてください。
+
 CSSについてはグローバルCSSの定義を含みます。BootstrapなどのCSSフレームワークや、ReactなどのJavaScriptライブラリを使用して開発する場合はそれらの仕様や定義に従ってください。
 <br>
 <br>

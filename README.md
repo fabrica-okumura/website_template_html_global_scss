@@ -36,11 +36,11 @@ CSSについてはグローバルCSSの定義を含みます。Bootstrapなど�
 <br>
 
 ## セレクタの命名規則
-コンポーネント（block）とその要素（element）をハイフン2つで繋ぎ、コンポーネントや要素の状態やバリエーション（modifier:修飾子）をハイフン2つから始まるセレクタ名を追加することで表現します。
+コンポーネント（block）とその要素（element）をアンダースコア2つで繋ぎ、コンポーネントや要素の状態やバリエーション（modifier）をハイフン2つから始まるセレクタ名を追加することで表現します。
 
-また、.user-profile__nameのように単語を分割する場合はハイフン1つで繋げて表現します。
+また、.c-user-profile__nameのように単語を示す場合はハイフン1つで区切って表現します。
 
-※命名規則は[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を基本としていますが、BEMの特性上セレクタ名が長くなり可読性が悪くなる傾向があるため、ルールを一部変更して定義しています。
+※命名規則は[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を基本としていますが、BEMの特性上、セレクタ名が長くなる傾向があるため、ルールを一部変更して定義しています。
 
 - .block {} … 親要素
 - .block .--modifier {} … 親要素の状態やバリエーション

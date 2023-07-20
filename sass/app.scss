@@ -1,0 +1,6 @@
+//レイヤー構成を保つため、読み込み順序の変更を禁止。
+@use "foundation";
+@use "layout";
+@use "component";
+@use "project";
+@use "utility";

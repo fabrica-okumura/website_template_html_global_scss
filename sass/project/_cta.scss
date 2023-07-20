@@ -1,0 +1,55 @@
+@use "../global" as *;
+.p-cta {
+  margin-top: $space_2xl;
+  @media #{$pc} {
+    margin-top: $space_4xl;
+  }
+
+  background: $theme_grad_900;
+
+  &__contents {
+    padding: $space_2xl 0;
+    @media #{$pc} {
+      padding: $space_4xl 0;
+      display: grid;
+      grid-template-areas:
+        "title btn"
+        "text btn";
+      column-gap: $space_xl;
+      grid-template-columns: 1fr 40rem;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    text-align: center;
+    font-size: $fs_2xl;
+    line-height: $lh_xs;
+    font-weight: bold;
+    margin-bottom: $space_sm;
+  }
+
+  &__text {
+    grid-area: text;
+    text-align: center;
+    font-size: $fs;
+    font-weight: bold;
+    line-height: $lh_sm;
+    margin-bottom: $space;
+    @media #{$pc} {
+      margin-bottom: 0;
+    }
+  }
+
+  .c-btn_primary {
+    grid-area: btn;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+
+    @media #{$pc} {
+      width: 100%;
+    }
+  }
+}

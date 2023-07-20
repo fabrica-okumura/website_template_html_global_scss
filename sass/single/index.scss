@@ -1,0 +1,78 @@
+@use "../global" as *;
+.s-hero {
+  // 固定ヘッダー分スペースを取る。
+  margin-top: 5.4rem;
+  background: $theme_200;
+  padding: $space_lg 0;
+  margin-bottom: $space_4xl;
+
+  @media #{$pc} {
+    margin-top: 9rem;
+    padding: $space_3xl 0;
+    margin-bottom: $space_9xl;
+  }
+
+  &__contents {
+    @media #{$pc} {
+      display: grid;
+      grid-template-areas:
+        "title img"
+        "text img"
+        "btn img";
+      column-gap: $space_xl;
+      align-items: center;
+      grid-template-columns: 1fr 50rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    line-height: $lh_xs;
+    font-weight: bold;
+    margin-bottom: $space_sm;
+    grid-area: title;
+
+    @media #{$pc} {
+      font-size: 4.4rem;
+      margin-bottom: $space;
+    }
+  }
+
+  &__text {
+    font-size: $fs;
+    font-weight: bold;
+    line-height: $lh_sm;
+    margin-bottom: $space;
+    grid-area: text;
+
+    @media #{$pc} {
+      font-size: $fs;
+      margin-bottom: $space_xl;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 87%;
+    margin: 0 auto $space_lg;
+    grid-area: img;
+
+    @media #{$pc} {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  .c-btn_primary {
+    display: block;
+    width: 93%;
+    margin: 0 auto;
+    grid-area: btn;
+
+    @media #{$pc} {
+      width: 46rem;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../global" as *;
+.c-grid {
+  display: grid;
+  gap: $space;
+}
+
+.c-grid_3column_pc {
+  display: grid;
+  gap: $space;
+  @media #{$pc} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-grid_autofill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  gap: $space;
+}

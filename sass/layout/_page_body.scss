@@ -1,0 +1,36 @@
+@use "../global" as *;
+.l-page_contents {
+  padding-bottom: $space_2xl;
+  @media #{$pc} {
+    padding-bottom: $space_6xl;
+  }
+}
+
+.l-side_column_pc {
+  &__main {
+    margin-bottom: $space_2xl;
+  }
+  &__aside {
+    margin-left: -$space_sm;
+    margin-right: -$space_sm;
+    padding-left: $space_sm;
+    padding-right: $space_sm;
+    background: $gray_200;
+  }
+  @media #{$pc} {
+    display: flex;
+    gap: 3rem;
+    &__main {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    &__aside {
+      width: 30rem;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      background: none;
+    }
+  }
+}

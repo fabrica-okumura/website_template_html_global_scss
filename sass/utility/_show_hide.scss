@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.u-show_only_pc {
+  display: none !important;
+
+  @media #{$pc} {
+    display: block !important;
+  }
+}
+
+.u-show_inlineblock_only_pc {
+  display: none !important;
+
+  @media #{$pc} {
+    display: inline-block !important;
+  }
+}
+
+.u-show_until_tb {
+  display: block !important;
+
+  @media #{$pc} {
+    display: none !important;
+  }
+}
+
+.u-show_over_tb {
+  display: none !important;
+
+  @media #{$over_tb} {
+    display: block !important;
+  }
+}
+
+.u-show_inlineblock_over_tb {
+  display: none !important;
+
+  @media #{$over_tb} {
+    display: inline-block !important;
+  }
+}
+
+.u-show_only_sp {
+  @media #{$over_tb} {
+    display: none !important;
+  }
+}

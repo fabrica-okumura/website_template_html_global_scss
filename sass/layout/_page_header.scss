@@ -1,0 +1,148 @@
+@use "../global" as *;
+.l-page_header {
+  position: relative;
+  z-index: 3;
+
+  &__contents {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5.4rem;
+
+    @media #{$pc} {
+      height: 9rem;
+    }
+
+    background: #fff;
+    box-shadow: $shadow;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: $space_sm;
+
+    @media #{$pc} {
+      img {
+        width: 240px;
+        height: 30px;
+      }
+    }
+
+    margin-right: auto;
+    margin-left: $space;
+  }
+
+  &__menu_pc {
+    display: none;
+
+    @media #{$pc} {
+      display: block;
+      margin-right: $space_sm;
+
+      ul {
+        display: flex;
+
+        li {
+          white-space: nowrap;
+          margin: 0 1.4rem;
+
+          a {
+            color: inherit;
+            font-size: $fs;
+            font-weight: bold;
+
+            &:hover {
+              color: $theme_900;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__menu_btn {
+    width: 5.4rem;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+
+    @media #{$pc} {
+      display: none;
+    }
+  }
+
+  &__menu_border {
+    display: block;
+    width: 20px;
+    margin: auto;
+    height: 3px;
+    background-color: $theme_900;
+    position: absolute;
+    right: 16px;
+    top: calc((100% - 4px) / 2);
+    border-radius: 3px;
+    transition: 0.2s;
+
+    &:nth-child(1) {
+      transform: translateY(-6px);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(6px);
+    }
+
+    .is-show_menu & {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__menu_sp {
+    position: fixed;
+    top: 5.4rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    transition: height 0.3s ease-out;
+    z-index: 3;
+    overflow-y: scroll;
+
+    @media #{$pc} {
+      display: none;
+    }
+
+    &.is-show_menu {
+      height: 100%;
+    }
+
+    ul {
+      margin: 2rem 1.8rem;
+    }
+
+    li {
+      border-bottom: 1px solid $gray_300;
+
+      a {
+        position: relative;
+        display: block;
+        color: inherit;
+        font-size: $fs;
+        line-height: $lh_xs;
+        padding: $space_sm;
+      }
+    }
+  }
+}

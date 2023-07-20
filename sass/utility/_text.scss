@@ -1,0 +1,60 @@
+@use "../global" as *;
+
+// position
+.u-text_center {
+  text-align: center;
+}
+
+.u-text_center_only_sp {
+  text-align: center;
+  @media #{$pc} {
+    text-align: left;
+  }
+}
+
+.u-text_right {
+  text-align: right;
+}
+
+// bold
+.u-text_bold {
+  font-weight: bold;
+}
+
+// marker
+.u-text_marker {
+  font-weight: bold;
+  background: linear-gradient(transparent 50%, $accent_100 0%);
+}
+
+// size
+.u-text_sm {
+  font-size: $fs_sm;
+  @media #{$pc} {
+    font-size: $fs;
+  }
+}
+
+.u-text_lg {
+  font-size: $fs;
+  @media #{$pc} {
+    font-size: $fs_lg;
+  }
+}
+
+// line-height
+.u-lh {
+  line-height: $lh;
+}
+
+.u-lh_sm {
+  line-height: $lh_sm;
+}
+
+.u-lh_xs {
+  line-height: $lh_xs;
+}
+
+.u-lh_2xs {
+  line-height: $lh_2xs;
+}

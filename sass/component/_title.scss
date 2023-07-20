@@ -1,0 +1,78 @@
+@use "../global" as *;
+
+.c-page_title {
+  margin-top: 5.4rem;
+  font-weight: bold;
+  font-size: $fs_4xl;
+  color: $theme_900;
+  line-height: $lh_sm;
+  padding-top: $space_sm;
+  border-left: 1rem solid $theme_900;
+  padding-left: $space_sm;
+  margin-bottom: $space_2xl;
+
+  @media #{$pc} {
+    margin-top: 9rem;
+    font-size: 4rem;
+    margin-bottom: $space_2xl;
+  }
+}
+
+.c-title_primary {
+  font-weight: bold;
+  font-size: $fs_2xl;
+  color: $theme_900;
+  line-height: $lh_sm;
+  padding-top: $space_sm;
+  border-left: 1rem solid $theme_900;
+  padding-left: $space_sm;
+  margin-bottom: $space_2xl;
+
+  @media #{$pc} {
+    font-size: $fs_3xl;
+    margin-bottom: $space_3xl;
+  }
+}
+
+.c-title_secondary {
+  font-size: $fs_xl;
+  font-weight: bold;
+  line-height: $lh_sm;
+  padding-bottom: $space_sm;
+  position: relative;
+  margin-bottom: $space;
+
+  &::after {
+    content: "";
+    width: 2.4rem;
+    height: 0.3rem;
+    background: $theme_900;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  @media #{$pc} {
+    font-size: $fs_2xl;
+    margin-bottom: $space_lg;
+
+    &::after {
+      width: 3.8rem;
+      height: 0.4rem;
+    }
+  }
+}
+
+.c-title_tertiary {
+  font-size: $fs_xl;
+  font-weight: bold;
+  line-height: $lh_sm;
+  margin-bottom: $space_sm;
+}
+
+.c-title_quaternary {
+  font-size: $fs;
+  font-weight: bold;
+  line-height: $lh_sm;
+  margin-bottom: 1.2rem;
+}

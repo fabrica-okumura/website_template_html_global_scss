@@ -1,0 +1,123 @@
+@use "../global" as *;
+
+.c-btn_primary {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  background: $accent_900;
+  padding: 1.6rem 3.6rem 1.6rem 3.2rem;
+  font-size: $fs_lg;
+  line-height: 1.2;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url(/img/common/icon_arrow_white.svg) no-repeat center/contain;
+    position: absolute;
+    inset: 0 1.6rem 0 auto;
+    margin: auto;
+  }
+
+  @media #{$pc} {
+    transition: background 0.3s ease-out;
+
+    &:hover {
+      background: $accent_500;
+    }
+  }
+
+  &.--sm {
+    padding: 1.2rem 3.6rem 1.2rem 3.2rem;
+    font-size: $fs_sm;
+  }
+
+  &.--xs {
+    padding: 0.8rem 1.6rem;
+    font-size: $fs_sm;
+    border-radius: 0.4rem;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &.--color2 {
+    background: $theme_900;
+
+    &:hover {
+      background: $theme_500;
+    }
+  }
+}
+
+.c-btn_secondary {
+  // 枠線、赤
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  border: 0.1rem solid $accent_900;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  color: $accent_900;
+  font-weight: bold;
+
+  @media #{$pc} {
+    transition: background 0.3s ease-out;
+
+    &:hover {
+      background: $accent_50;
+    }
+  }
+}
+
+.c-btn_secondary_color_a {
+  // 枠線、青
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  border: 0.1rem solid $theme_900;
+  border-radius: 0.4rem;
+  padding: 1.2rem 3.6rem 1.2rem 3.2rem;
+  font-size: 16px;
+  font-size: $fs_sm;
+  color: $theme_900;
+  font-weight: bold;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(/img/common/icon_arrow_blue.svg) no-repeat center/contain;
+    position: absolute;
+    inset: 0 1.6rem 0 auto;
+    margin: auto;
+  }
+
+  @media #{$pc} {
+    transition: background 0.3s ease-out;
+
+    &:hover {
+      color: white;
+      background: $theme_700;
+
+      &::after {
+        background: url(/img/common/icon_arrow_white.svg) no-repeat
+          center/contain;
+      }
+    }
+  }
+
+  &.--sm {
+    padding: 0.8rem 3.6rem 0.8rem 2.4rem;
+    font-size: $fs_xs;
+    font-weight: normal;
+  }
+}

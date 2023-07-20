@@ -1,0 +1,9 @@
+@use "../global" as *;
+.c-page_summary {
+  line-height: $lh;
+  margin-bottom: $space;
+
+  @media #{$pc} {
+    margin-bottom: $space_lg;
+  }
+}

@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+.u-mb_xs {
+  margin-bottom: $space_sm;
+
+  @media #{$pc} {
+    margin-bottom: $space;
+  }
+}
+
+.u-mb_sm {
+  margin-bottom: $space;
+
+  @media #{$pc} {
+    margin-bottom: $space;
+  }
+}
+
+.u-mb {
+  margin-bottom: $space_lg;
+
+  @media #{$pc} {
+    margin-bottom: $space_lg;
+  }
+}
+
+.u-mb_lg {
+  margin-bottom: $space_lg;
+
+  @media #{$pc} {
+    margin-bottom: $space_xl;
+  }
+}
+
+.u-mb_xl {
+  margin-bottom: $space_xl;
+
+  @media #{$pc} {
+    margin-bottom: $space_2xl;
+  }
+}
+
+.u-mb_2xl {
+  margin-bottom: $space_2xl;
+
+  @media #{$pc} {
+    margin-bottom: $space_3xl;
+  }
+}
+.u-mb_3xl {
+  margin-bottom: $space_2xl;
+
+  @media #{$pc} {
+    margin-bottom: $space_3xl;
+  }
+}
+.u-mb_4xl {
+  margin-bottom: $space_4xl;
+
+  @media #{$pc} {
+    margin-bottom: $space_6xl;
+  }
+}
+.u-mb_5xl {
+  margin-bottom: $space_5xl;
+
+  @media #{$pc} {
+    margin-bottom: $space_7xl;
+  }
+}

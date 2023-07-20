@@ -1,0 +1,220 @@
+@use "../global" as *;
+
+.c-input {
+  // ブラウザ標準のプルダウンアイコンなどを非表示。
+  appearance: none;
+  width: 100%;
+  max-width: 100%;
+  color: inherit;
+  font-family: inherit;
+  // iOSでのタップ時フォームパーツの拡大防止。16px以上のfont-size必須。
+  font-size: 1.6rem;
+  line-height: 1.6;
+  border-radius: 0.4rem;
+  border: 0.1rem solid $gray_400;
+  background-color: $gray_50;
+  outline: none;
+  transition: all 0.2s ease-out;
+
+  &:focus {
+    box-shadow: 0 0 5px #244ab8;
+    border: 1px solid #244ab8;
+  }
+
+  &.is-ok {
+    background-color: #ecf8f6;
+  }
+
+  &.is-error {
+    border: 1px solid #f05e5e;
+    background-color: #fef6f6;
+  }
+
+  &::placeholder {
+    color: $gray_500;
+  }
+
+  &:disabled {
+    background-color: $gray_300;
+    color: $body_text_color;
+    -webkit-text-fill-color: $body_text_color;
+    opacity: 1;
+  }
+}
+
+textarea.c-input {
+  padding: 1.2rem;
+
+  @media #{$pc} {
+    padding: 1.6rem;
+  }
+}
+
+:not(textarea).c-input {
+  padding: 0 1.2rem;
+  height: 4.8rem;
+
+  @media #{$pc} {
+    padding: 0 1.6rem;
+    height: 5.8rem;
+  }
+}
+
+select.c-input {
+  padding: 0 3.6rem 0 1.2rem;
+
+  @media #{$pc} {
+    width: auto;
+  }
+
+  // selectにbefore/after疑似要素は付けられないため、矢印をbackground-imageで設定。
+  background-image: url(/img/common/select_bg.svg);
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1.2rem) center;
+}
+
+input[type="checkbox"].c-checkbox {
+  display: none;
+
+  & + * {
+    // checkbox.c-checkboxの後ろにspanを配置し、labelで囲む。
+    // <label><input type="checkbox" class="c-checkbox"><span>ラベルテキスト</span></label>
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+    min-height: 3rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem;
+
+    &:before {
+      content: "";
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      inset: 0 auto 0 0;
+      margin: auto;
+      border-radius: 0.3rem;
+      background: $gray_300;
+      transition: background 0.1s ease-out;
+    }
+
+    &:after {
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      background: url(/img/common/icon_check.svg) no-repeat center / contain;
+      position: absolute;
+      inset: 0 auto 0 0.3rem;
+      margin: auto;
+    }
+  }
+
+  &:checked + * {
+    &:before {
+      background: #0b49bf;
+    }
+  }
+}
+
+input[type="radio"].c-radio {
+  display: none;
+
+  & + * {
+    // radio.c-radioの後ろにspanを配置し、labelで囲む。
+    // <label><input type="radio" class="c-radio"><span>ラベルテキスト</span></label>
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+    min-height: 3rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem;
+
+    &:before {
+      content: "";
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      inset: 0 auto 0 0;
+      margin: auto;
+      border-radius: 50%;
+      background: $gray_300;
+      transition: background 0.1s ease-out;
+    }
+
+    &:after {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      position: absolute;
+      inset: 0 auto 0 0.9rem;
+      margin: auto;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+
+  &:checked + * {
+    &:before {
+      background: #0b49bf;
+    }
+  }
+}
+
+.c-input_status {
+  display: inline-block;
+  min-width: 5rem;
+  padding: 0.5rem 1rem;
+  background: #f05e5e;
+  font-size: $fs_2xs;
+  @media #{$pc} {
+    font-size: $fs_xs;
+  }
+  color: #fff;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+
+  &.--optional {
+    background: #acb0b5;
+  }
+
+  &.is-ok {
+    background: #48b5a9;
+  }
+}
+
+.c-input_error_text {
+  display: none;
+  margin-top: 0.6rem;
+  color: #f05e5e;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: $fs_xs;
+
+  @media #{$pc} {
+    margin-top: 1.2rem;
+    font-size: $fs_sm;
+  }
+  &.is-show {
+    display: block;
+  }
+}
+
+.c-label_block {
+  // blockラベル設定。
+  display: block;
+  border: 0.1rem solid $gray_300;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+
+  @media #{$pc} {
+    display: inline-block;
+    border: none;
+    padding: 0;
+  }
+}

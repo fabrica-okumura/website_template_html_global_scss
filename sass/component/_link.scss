@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+.c-link {
+  @media #{$pc} {
+    border-bottom: 0.1rem solid transparent;
+    transition: border-bottom 0.3s ease-out;
+
+    &:hover {
+      border-bottom: 0.1rem solid $theme_900;
+    }
+  }
+}
+
+.c-link_blank {
+  position: relative;
+  padding-right: 1.2em;
+  margin-right: 0.4em;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: url(/img/common/icon_blank_blue.svg) no-repeat center/contain;
+    inset: 0 0 0 auto;
+    margin: auto;
+  }
+
+  @media #{$pc} {
+    span {
+      border-bottom: 0.1rem solid transparent;
+      transition: border-bottom 0.3s ease-out;
+    }
+
+    &:hover span {
+      border-bottom: 0.1rem solid $theme_900;
+    }
+  }
+}
+
+.c-link_arrow {
+  color: $theme_900;
+  position: relative;
+  padding-right: 0.8em;
+  margin-right: 0.4em;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0.8em;
+    height: 0.8em;
+    background: url(/img/common/icon_arrow_blue.svg) no-repeat center/contain;
+    inset: 0 0 0 auto;
+    margin: auto;
+  }
+
+  @media #{$pc} {
+    span {
+      border-bottom: 0.1rem solid transparent;
+      transition: border-bottom 0.3s ease-out;
+    }
+
+    &:hover span {
+      border-bottom: 0.1rem solid $theme_900;
+    }
+  }
+}

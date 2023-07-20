@@ -1,0 +1,67 @@
+@use "../global" as *;
+.u-overflow_x_hidden {
+  overflow-x: hidden;
+}
+
+.u-cw {
+  padding-left: $space_sm;
+  padding-right: $space_sm;
+
+  @media #{$pc} {
+    padding-left: $space_lg;
+    padding-right: $space_lg;
+    max-width: calc(#{$bp_2xl} + (#{$space_lg}*2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-cw_only_pc {
+
+  //SPレイアウト時の左右スペースなし。PC2カラム時などに使用する。
+  @media #{$pc} {
+    padding-left: $space_lg;
+    padding-right: $space_lg;
+    max-width: calc(#{$bp_2xl} + (#{$space_lg}*2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-cw_narrow {
+  //PCレイアウト時コンテンツ幅が狭いバージョン。
+  padding-left: $space_sm;
+  padding-right: $space_sm;
+
+  @media #{$pc} {
+    padding-left: $space_lg;
+    padding-right: $space_lg;
+    max-width: calc(#{$bp_xl} + (#{$space_lg}*2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-cw_narrow_only_pc {
+
+  //SPレイアウト時の左右スペースなし。PCレイアウト時コンテンツ幅が狭いバージョン。
+  @media #{$pc} {
+    padding-left: $space_lg;
+    padding-right: $space_lg;
+    max-width: calc(#{$bp_xl} + (#{$space_lg}*2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-cw_only_sp {
+  padding-left: $space_sm;
+  padding-right: $space_sm;
+
+  @media #{$pc} {
+    //PCレイアウト時の左右スペースなし。2カラムレイアウト時など。
+    padding-left: 0;
+    padding-right: 0;
+    max-width: calc(#{$bp_2xl} + (#{$space_lg}*2));
+  }
+}

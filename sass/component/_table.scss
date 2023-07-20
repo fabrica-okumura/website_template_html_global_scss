@@ -1,0 +1,26 @@
+@use "../global" as *;
+
+.c-table {
+  th,
+  td {
+    border: 1px solid $gray_500;
+    padding: $space_sm;
+    line-height: $lh_sm;
+  }
+
+  th {
+    background: $gray_100;
+  }
+
+  &.--sm {
+    th,
+    td {
+      font-size: $fs_xs;
+      padding: $space_xs;
+
+      @media #{$pc} {
+        font-size: $fs_sm;
+      }
+    }
+  }
+}

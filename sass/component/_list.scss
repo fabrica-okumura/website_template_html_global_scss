@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+.c-list {
+  display: grid;
+  gap: 0.8em;
+  li {
+    line-height: $lh_sm;
+    position: relative;
+    padding-left: 1em;
+    &::before {
+      content: "";
+      width: 0.5em;
+      height: 0.5em;
+      background: $theme_900;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+    }
+  }
+}

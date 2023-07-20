@@ -1,0 +1,33 @@
+@use "../global" as *;
+.c-breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  color: $gray_700;
+  font-size: $fs_xs;
+  padding-bottom: 1.2rem;
+  margin-bottom: $space_lg;
+  overflow: auto;
+  li {
+    white-space: nowrap;
+    &:not(:last-of-type) {
+      display: flex;
+      align-items: center;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 0.8em;
+        height: 0.8em;
+        background: url(/img/common/icon_arrow_gray.svg) no-repeat
+          center/contain;
+        margin-left: 0.5rem;
+      }
+    }
+    &:last-of-type {
+      @media #{$pc}{
+        max-width: 70rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

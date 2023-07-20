@@ -1,0 +1,52 @@
+@use "../global" as *;
+.s-form {
+  display: grid;
+  gap: $space;
+
+  @media #{$pc} {
+    gap: $space_xl;
+    border: 0.3rem solid $gray_300;
+    border-radius: 2rem;
+    padding: 8rem;
+  }
+
+  > dl {
+    dt {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.9rem;
+
+      @media #{$pc} {
+        margin-bottom: 1.2rem;
+      }
+
+      .c-input_status {
+        margin-left: 0.8em;
+      }
+    }
+  }
+
+  &__btn_list {
+    display: grid;
+    gap: 0.9rem;
+
+    @media #{$pc} {
+      gap: 1.8rem;
+    }
+  }
+}
+
+.s-form_btn_area {
+  text-align: center;
+
+  .c-btn_primary {
+    width: 100%;
+
+    @media #{$pc} {
+      width: 50rem;
+    }
+  }
+}

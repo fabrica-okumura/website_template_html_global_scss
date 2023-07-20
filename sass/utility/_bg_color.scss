@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.u-bg_color {
+  &_a {
+    background: $theme_50;
+  }
+  &_b {
+    background: $theme_200;
+  }
+  &_c {
+    background: $gray_100;
+  }
+}

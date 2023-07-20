@@ -1,0 +1,144 @@
+@use "../global" as *;
+
+.c-article_card {
+  $this: ".c-article_card";
+  background: white;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 5rem $shadow_color;
+  &__contents {
+    padding: 2rem;
+    transition: $ani_opacity;
+  }
+  &__image {
+    height: 18rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-out;
+    }
+  }
+  &__title {
+    margin-bottom: $space_sm;
+    a {
+      color: inherit;
+      font-weight: bold;
+      line-height: $lh_xs;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+  &__summary {
+    line-height: $lh_xs;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom: $space_sm;
+    @media #{$pc} {
+      font-size: $fs_sm;
+    }
+  }
+  &__date {
+    font-size: $fs_2xs;
+    color: $gray_700;
+  }
+  @media #{$pc} {
+    &:hover {
+      #{$this}__image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      #{$this}__contents {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+// PC横並びカード
+.c-article_card_b {
+  $this: ".c-article_card_b";
+  display: grid;
+  grid-template-areas:
+    "image"
+    "date"
+    "title";
+  background: white;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 5rem $shadow_color;
+  padding: 2rem;
+  &__title {
+    order: 3;
+    grid-area: title;
+    transition: $ani_opacity;
+    // opacityやtransformを設定している要素がある場合それらは自動的にz-index:0となるため、予めz-index:2を設定しておく。
+    z-index: 2;
+    a {
+      color: inherit;
+      font-weight: bold;
+      line-height: $lh_xs;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+  &__image {
+    order: 1;
+    grid-area: image;
+    height: 18rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-out;
+    }
+    margin-bottom: $space_sm;
+  }
+  &__date {
+    order: 2;
+    grid-area: date;
+    font-size: $fs_2xs;
+    color: $gray_700;
+    transition: $ani_opacity;
+    margin-bottom: $space_sm;
+  }
+  @media #{$pc} {
+    grid-template-areas:
+      "image date"
+      "image title";
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: min-content 1fr;
+    column-gap: $space;
+    &__title {
+      margin-bottom: 0;
+    }
+    &__image {
+      height: 12rem;
+      margin-bottom: 0;
+    }
+    &:hover {
+      #{$this}__image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      #{$this}__title,
+      #{$this}__date {
+        opacity: 0.6;
+      }
+    }
+  }
+}

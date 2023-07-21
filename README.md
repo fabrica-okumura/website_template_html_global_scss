@@ -5,7 +5,7 @@
 <br>
 
 # 概要
-- CSSはSASS（scss）のDart Sass記法で記述しています。
+- CSSはSASS（.scss）のDart Sass記法で記述しています。
 - jQueryなどのJavaScriptライブラリは使用していません。
 - PHPで一部コンポーネントの読み込みをおこなっています。
 <br>

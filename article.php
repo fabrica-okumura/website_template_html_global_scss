@@ -72,8 +72,8 @@ $page="article";
       <a href="" class="c-list_pager__first"><span>最初のページへ</span></a>
       <a href="" class="c-list_pager__prev"><span>前のページへ</span></a>
       <div class="c-list_pager__num">1 / 5</div>
-      <a href="URL" class="c-list_pager__next"><span>次のページへ</span></a>
-      <a href="URL" class="c-list_pager__last"><span>最後のページへ</span></a>
+      <a href="url" class="c-list_pager__next"><span>次のページへ</span></a>
+      <a href="url" class="c-list_pager__last"><span>最後のページへ</span></a>
     </div>
 
     <div class="c-article_pager u-mb">

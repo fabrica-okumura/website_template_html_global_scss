@@ -1,7 +1,6 @@
 @use "../global" as *;
-
 .c-input {
-  // ブラウザ標準のプルダウンアイコンなどを非表示。
+  // ブラウザ標準のプルダウンアイコンなどを非表示にする。
   appearance: none;
   width: 100%;
   max-width: 100%;
@@ -15,25 +14,20 @@
   background-color: $gray_50;
   outline: none;
   transition: all 0.2s ease-out;
-
   &:focus {
-    box-shadow: 0 0 5px #244ab8;
-    border: 1px solid #244ab8;
+    box-shadow: 0 0 0.5rem #244ab8;
+    border: 0.1rem solid #244ab8;
   }
-
   &.is-ok {
     background-color: #ecf8f6;
   }
-
   &.is-error {
-    border: 1px solid #f05e5e;
+    border: 0.1rem solid #f05e5e;
     background-color: #fef6f6;
   }
-
   &::placeholder {
     color: $gray_500;
   }
-
   &:disabled {
     background-color: $gray_300;
     color: $body_text_color;
@@ -44,7 +38,6 @@
 
 textarea.c-input {
   padding: 1.2rem;
-
   @media #{$pc} {
     padding: 1.6rem;
   }
@@ -53,7 +46,6 @@ textarea.c-input {
 :not(textarea).c-input {
   padding: 0 1.2rem;
   height: 4.8rem;
-
   @media #{$pc} {
     padding: 0 1.6rem;
     height: 5.8rem;
@@ -62,11 +54,9 @@ textarea.c-input {
 
 select.c-input {
   padding: 0 3.6rem 0 1.2rem;
-
   @media #{$pc} {
     width: auto;
   }
-
   // selectにbefore/after疑似要素は付けられないため、矢印をbackground-imageで設定。
   background-image: url(/img/common/select_bg.svg);
   background-size: 1em 1em;
@@ -76,7 +66,6 @@ select.c-input {
 
 input[type="checkbox"].c-checkbox {
   display: none;
-
   & + * {
     // checkbox.c-checkboxの後ろにspanを配置し、labelで囲む。
     // <label><input type="checkbox" class="c-checkbox"><span>ラベルテキスト</span></label>
@@ -87,7 +76,6 @@ input[type="checkbox"].c-checkbox {
     cursor: pointer;
     position: relative;
     padding-left: 4rem;
-
     &:before {
       content: "";
       width: 3rem;
@@ -99,7 +87,6 @@ input[type="checkbox"].c-checkbox {
       background: $gray_300;
       transition: background 0.1s ease-out;
     }
-
     &:after {
       content: "";
       width: 2.4rem;
@@ -110,7 +97,6 @@ input[type="checkbox"].c-checkbox {
       margin: auto;
     }
   }
-
   &:checked + * {
     &:before {
       background: #0b49bf;
@@ -120,7 +106,6 @@ input[type="checkbox"].c-checkbox {
 
 input[type="radio"].c-radio {
   display: none;
-
   & + * {
     // radio.c-radioの後ろにspanを配置し、labelで囲む。
     // <label><input type="radio" class="c-radio"><span>ラベルテキスト</span></label>
@@ -131,7 +116,6 @@ input[type="radio"].c-radio {
     cursor: pointer;
     position: relative;
     padding-left: 4rem;
-
     &:before {
       content: "";
       width: 3rem;
@@ -143,7 +127,6 @@ input[type="radio"].c-radio {
       background: $gray_300;
       transition: background 0.1s ease-out;
     }
-
     &:after {
       content: "";
       width: 1.2rem;
@@ -155,7 +138,6 @@ input[type="radio"].c-radio {
       background: white;
     }
   }
-
   &:checked + * {
     &:before {
       background: #0b49bf;
@@ -177,11 +159,9 @@ input[type="radio"].c-radio {
   line-height: 1;
   text-align: center;
   white-space: nowrap;
-
   &.--optional {
     background: #acb0b5;
   }
-
   &.is-ok {
     background: #48b5a9;
   }
@@ -194,7 +174,6 @@ input[type="radio"].c-radio {
   font-weight: bold;
   line-height: 1.2;
   font-size: $fs_xs;
-
   @media #{$pc} {
     margin-top: 1.2rem;
     font-size: $fs_sm;
@@ -211,7 +190,6 @@ input[type="radio"].c-radio {
   border-radius: 0.4rem;
   padding: 0.8rem 1.2rem;
   cursor: pointer;
-
   @media #{$pc} {
     display: inline-block;
     border: none;

@@ -1,17 +1,14 @@
 @use "../global" as *;
-
 .c-table {
   th,
   td {
-    border: 1px solid $gray_500;
+    border: 0.1rem solid $gray_500;
     padding: $space_sm;
     line-height: $lh_sm;
   }
-
   th {
     background: $gray_100;
   }
-
   &.--sm {
     th,
     td {

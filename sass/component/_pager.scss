@@ -32,6 +32,13 @@
       }
     }
   }
+  @mixin no_link {
+    pointer-events: none;
+    &::before {
+      filter: sepia(1);
+      opacity: 0.2;
+    }
+  }
   &__first {
     @include btn;
     border-right: 0.1rem solid $gray_300;
@@ -41,12 +48,7 @@
       transform: rotate(180deg);
     }
     &[href=""] {
-      pointer-events: none;
-      &::before {
-        background: url(/img/common/icon_arrow_gray_double.svg) no-repeat
-          center/contain;
-        opacity: 0.1;
-      }
+      @include no_link;
     }
   }
   &__prev {
@@ -56,12 +58,7 @@
       transform: rotate(180deg);
     }
     &[href=""] {
-      pointer-events: none;
-      &::before {
-        background: url(/img/common/icon_arrow_blue.svg) no-repeat
-          center/contain;
-        opacity: 0.1;
-      }
+      @include no_link;
     }
   }
   &__num {
@@ -75,12 +72,7 @@
       background: url(/img/common/icon_arrow_blue.svg) no-repeat center/contain;
     }
     &[href=""] {
-      pointer-events: none;
-      &::before {
-        background: url(/img/common/icon_arrow_gray.svg) no-repeat
-          center/contain;
-        opacity: 0.1;
-      }
+      @include no_link;
     }
   }
   &__last {
@@ -91,12 +83,7 @@
         center/contain;
     }
     &[href=""] {
-      pointer-events: none;
-      &::before {
-        background: url(/img/common/icon_arrow_gray_double.svg) no-repeat
-          center/contain;
-        opacity: 0.1;
-      }
+      @include no_link;
     }
   }
 }

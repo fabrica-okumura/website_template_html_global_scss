@@ -16,9 +16,9 @@
     @media #{$pc} {
       display: grid;
       grid-template-areas:
-        "title img"
-        "text img"
-        "btn img";
+        "title image"
+        "text image"
+        "btn image";
       column-gap: $space_xl;
       align-items: center;
       grid-template-columns: 1fr 50rem;
@@ -51,11 +51,11 @@
     }
   }
 
-  &__img {
+  &__image {
     display: block;
     width: 87%;
     margin: 0 auto $space_lg;
-    grid-area: img;
+    grid-area: image;
 
     @media #{$pc} {
       width: 100%;

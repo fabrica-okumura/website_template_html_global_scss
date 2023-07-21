@@ -17,27 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".l-page_header__menu_btn")
     .addEventListener("click", function () {
-      this.classList.toggle("is-show_menu");
-      if (this.classList.contains("is-show_menu")) {
+      body.classList.toggle("is-show_sp_menu");
+      if (body.classList.contains("is-show_sp_menu")) {
         bodyFixedOn();
       } else {
         bodyFixedOff();
       }
-      document
-        .querySelector(".l-page_header__menu_sp")
-        .classList.toggle("is-show_menu");
     });
 
-  const links = document.querySelectorAll(".l-page_header__menu_sp a");
-  links.forEach(function (link) {
+  const spMenuLinks = document.querySelectorAll(".l-page_header__menu_sp a");
+  spMenuLinks.forEach(function (link) {
     link.addEventListener("click", function () {
+      body.classList.toggle("is-show_sp_menu");
       bodyFixedOff();
-      document
-        .querySelector(".l-page_header__menu_sp")
-        .classList.toggle("is-show_menu");
-      document
-        .querySelector(".l-page_header__menu_btn")
-        .classList.toggle("is-show_menu");
     });
   });
 
@@ -61,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Accordion component
-const accordion_buttons = document.querySelectorAll(".u-accordion_btn");
-accordion_buttons.forEach((button) => {
+const accordionButtons = document.querySelectorAll(".u-accordion_btn");
+accordionButtons.forEach((button) => {
   button.addEventListener("click", function () {
     const content = this.nextElementSibling;
     if (this.classList.contains("is-open")) {
@@ -81,7 +73,7 @@ accordion_buttons.forEach((button) => {
 
 // Set the initial height for contents that are already open
 window.addEventListener("DOMContentLoaded", (event) => {
-  accordion_buttons.forEach((button) => {
+  accordionButtons.forEach((button) => {
     if (button.classList.contains("is-open")) {
       const content = button.nextElementSibling;
       content.style.height = "auto";

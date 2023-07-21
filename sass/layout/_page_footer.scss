@@ -1,7 +1,6 @@
 @use "../global" as *;
 .l-page_footer {
   background: $theme_300;
-
   &__contents {
     padding: $space_lg 0;
     @media #{$pc} {
@@ -11,7 +10,6 @@
       justify-content: space-between;
     }
   }
-
   &__btn_to_top {
     position: fixed;
     right: 1rem;
@@ -25,44 +23,36 @@
     height: 5rem;
     background: #fff;
     border-radius: 50%;
-    border: 1px solid $theme_100;
-
+    border: 0.1rem solid $theme_100;
     img {
       transform: rotate(-90deg);
     }
-
     &.is-show {
       bottom: 4rem;
     }
-
     @media #{$pc} {
       right: 3rem;
       width: 6rem;
       height: 6rem;
       transition: $ani_opacity;
-
       &:hover {
         opacity: 0.6;
       }
-
       img {
         width: 2.4rem;
         height: 2.4rem;
       }
     }
   }
-
   &__logo {
     display: block;
     margin: 0 auto $space;
-
     @media #{$pc} {
       margin: 0;
       width: 24rem;
       height: 3rem;
     }
   }
-
   &__copyright {
     display: block;
     text-align: center;

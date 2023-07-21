@@ -1,7 +1,6 @@
 @use "../global" as *;
-
 html {
-  // 1px=1remに変換するための設定。
+  // 1px=1remにするための設定。
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: $space_lg;
@@ -9,7 +8,6 @@ html {
     scroll-padding-top: $space_3xl;
   }
 }
-
 body {
   //chromeのfont-size表示バグのためbodyのみem指定。各要素はrem指定する。
   font-size: $fs_sm;
@@ -24,21 +22,18 @@ body {
     font-size: $fs;
   }
 }
-
 a {
   color: $text_link_color;
   text-decoration: none;
 }
-
 button {
   vertical-align: middle;
-  //クリック時にずれないために必要
+  //クリック時にずれないための設定。
   padding: 0;
   outline: none;
   border: 0;
   cursor: pointer;
 }
-
 img {
   max-width: 100%;
   height: auto;

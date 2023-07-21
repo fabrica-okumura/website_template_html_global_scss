@@ -8,13 +8,13 @@ $page="home";
       <div class="s-hero__contents">
         <h2 class="s-hero__title">HEROタイトルHEROタイトル<br>HEROタイトル</h2>
         <p class="s-hero__text">HEROテキストHEROテキストHEROテキストHEROテキストHEROテキストHEROテキストHEROテキストHEROテキスト</p>
-        <img src="/img/index/hero_img.png" width="300" height="230" alt="" class="s-hero__img">
+        <img src="/img/home/hero_img.png" width="300" height="230" alt="" class="s-hero__image">
         <a href="/form.php" class="c-btn_primary">お問い合わせ</a>
       </div>
     </div>
   </section>
 
-  <p class="u-cw u-lh"><a href="article.php">記事一覧ページ</a>にサイドカラムレイアウト、グリッド、カード、ページャー、パンくずリストを配置。<a href="form.php">お問い合わせページ</a>にフォームの各パーツを配置しています。</p>
+  <p class="u-cw u-lh"><a href="/article.php">記事一覧ページ</a>にサイドカラムレイアウト、グリッド、カード、ページャー、パンくずリストを配置。<a href="/form.php">お問い合わせページ</a>にフォームの各パーツを配置しています。</p>
 
   <section class="u-section" id="section_title">
     <div class="u-cw">

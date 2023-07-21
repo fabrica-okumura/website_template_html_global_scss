@@ -37,7 +37,7 @@
 ## セレクタの命名規則
 セレクタの命名規則については[MindBEMding](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)を基本としていますが、BEMの特性上、セレクタ名が長くなり可読性が悪くなる傾向があるため、ルールを一部変更して定義しています。
 
-コンポーネント（block）とその要素（element）をアンダースコア2つで繋ぎ、コンポーネントや要素の状態やバリエーション（modifier）をハイフン2つから始まるセレクタ名を追加することで表現します。
+コンポーネント（block）とその要素（element）をアンダースコア2つで繋ぎ、コンポーネントや要素の状態やバリエーション（modifier）をハイフン2つから始まるセレクタを追加することで表現します。
 
 - .block {} … 親要素
 - .block.--modifier {} … 親要素の状態やバリエーション
@@ -48,11 +48,11 @@
 .c-btn {
   //ボタンコンポーネントの基本設定
   //以下、modifier設定
-  .--primary {
+  &.--primary {
   }
-  .--secondary {
+  &.--secondary {
   }
-  .--danger {
+  &.--danger {
   }
 }
 ```

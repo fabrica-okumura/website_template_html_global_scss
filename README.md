@@ -1,10 +1,10 @@
-グローバルCSSを使用してウェブサイト開発を始めるための基本的なHTML、グローバルCSS、JavaScriptのファイルセットです。
+グローバルCSSを使用してウェブサイト開発を始めるための基本的なHTML、CSS（SASS）、JavaScriptのファイルセットです。
 
 ブラウザでの表示確認は、https://web-template-html-global-scss.onrender.com/ にアクセスしてください。
 <br>
 <br>
 
-# 概要
+# ファイルの概要
 - CSSはSASS（.scss）のDart Sass記法で記述しています。
 - jQueryなどのJavaScriptライブラリは使用していません。
 - PHPで一部コンポーネントの読み込みをおこなっています。
@@ -49,17 +49,20 @@
   //ボタンコンポーネントの基本設定
   //以下、modifier設定
   &.--primary {
+
   }
   &.--secondary {
+
   }
   &.--danger {
+
   }
 }
 ```
 
-単語の区切りを表す場合はハイフン1つを使用します。
+単語の区切りを表す場合はハイフン1つで表現します。
 ```scss
-//ユーザープロフィール
+//ユーザープロフィールコンポーネントの例
 .c-user-profile {
   
 }
@@ -72,7 +75,7 @@ margin-bottomのUtilityクラスの例：u-mb_2xl,u-mb_xl,u-mb_lg,u-mb,u-mb_sm,u
 <br>
 
 ### 要素の階層が深くなる場合
-要素の階層が深くなる場合は、要素の階層をすべて__で繋げていくとセレクタ名が長くなってしまいます。例えば、block > element > subelementの構造を持つ場合は、.block__element__subelementなどとせず、以下のようにフラットな構造にします。
+要素の階層が深くなる場合は、要素の階層をすべて__で繋げていくとセレクタ名が長くなってしまいます。例えばblock > element > subelementの構造を持つコンポーネントがある場合は、.block__element__subelementなどとせず、以下のようにフラットな構造にします。
 
 ```scss
 .c-block {
@@ -94,7 +97,7 @@ margin-bottomのUtilityクラスの例：u-mb_2xl,u-mb_xl,u-mb_lg,u-mb,u-mb_sm,u
     // 子のulの設定
     li {
       a {
-        // メニューボタンの設定
+        // メニューリンクの設定
       }
     }
   }

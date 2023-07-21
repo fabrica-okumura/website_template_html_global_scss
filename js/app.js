@@ -14,9 +14,9 @@ function bodyFixedOff() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .querySelector(".l-page_header__menu_btn")
-    .addEventListener("click", function () {
+  const spMenuButton = document.querySelector(".l-page_header__menu_btn");
+  if (spMenuButton !== null) {
+    spMenuButton.addEventListener("click", function () {
       body.classList.toggle("is-show_sp_menu");
       if (body.classList.contains("is-show_sp_menu")) {
         bodyFixedOn();
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bodyFixedOff();
       }
     });
+  }
 
   const spMenuLinks = document.querySelectorAll(".l-page_header__menu_sp a");
   spMenuLinks.forEach(function (link) {

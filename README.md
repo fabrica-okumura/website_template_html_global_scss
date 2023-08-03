@@ -2,13 +2,11 @@
 
 ブラウザでの表示確認は、https://web-template-html-global-scss.onrender.com/ にアクセスしてください。
 <br>
-<br>
 
 # ファイルの概要
 - CSSはSASS（.scss）のDart Sass記法で記述しています。
-- jQueryなどのJavaScriptライブラリは使用していません。
+- JavaScriptはjQueryなどのライブラリは使用していません。
 - PHPで一部コンポーネントの読み込みをおこなっています。
-<br>
 <br>
 
 # 環境設定
@@ -30,7 +28,6 @@ docker-compose up -d
 - http://localhost:8000/ にアクセスします。
 - ctrl + Cまたは `docker-compose down`でコンテナを停止できます。
 <br>
-<br>
 
 # .scssファイルの編集とCSSのコンパイル
 CSSのコンパイルはgulpを使用します。
@@ -40,11 +37,9 @@ npx gulp
 ```
 - ctrl + C でタスクを停止できます。
 <br>
-<br>
 
 # CSS設計
 グローバルCSSを使用する場合、それらを適切に管理しないとスタイルの競合や予期しない表示崩れなどが発生する可能性があるため、メンテナンス性や拡張性を意識したCSS設計が必要となります。ここでは[FLOCSS](https://github.com/hiloki/flocss)の設計手法を基本とし、独自のルールを追加して定義しています。
-<br>
 <br>
 
 ## レイヤーの定義
@@ -62,7 +57,6 @@ npx gulp
 |Utility|u-|プロパティ単体での指定を補助するもの。単一の機能を持つヘルパーモジュールを定義。|margin/size/text...|
 |Single|s-|ページ個別で使用されるスタイルのファイルを定義。|home.scss/about.scss/form.scss...|
 |External|なし|swiperなどの外部ライブラリを使用しており、それらのCSSを上書きする必要がある場合のファイルを定義。externalディレクトリに各ファイルを格納する。|swiper_overrides.scss...|
-<br>
 <br>
 
 ## セレクタの命名規則
@@ -103,7 +97,6 @@ Utilityは親要素を持たないヘルパーモジュールであるため、�
 
 margin-bottomのUtilityクラスの例：u-mb_2xl,u-mb_xl,u-mb_lg,u-mb,u-mb_sm,u-mb_xs
 <br>
-<br>
 
 ### 要素の階層が深くなる場合
 要素の階層が深くなる場合は、要素の階層をすべて__で繋げていくとセレクタ名が長くなってしまいます。例えばblock > element > subelementの構造を持つコンポーネントがある場合は、.block__element__subelementなどとせず、以下のようにフラットな構造にします。
@@ -134,7 +127,6 @@ margin-bottomのUtilityクラスの例：u-mb_2xl,u-mb_xl,u-mb_lg,u-mb,u-mb_sm,u
   }
 }
 ```
-<br>
 <br>
 
 ### その他

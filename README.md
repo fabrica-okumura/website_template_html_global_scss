@@ -17,7 +17,7 @@
 #ファイルをダウンロードする任意のディレクトリに移動
 cd hoge
 #ファイルのダウンロード
-git clone https://github.com/yourusername/yourrepository.git
+git clone git@github.com:fabrica-okumura/website_template_html_global_scss.git
 #ダウンロードしたディレクトリに移動
 cd yourrepository
 #必要なパッケージをインストール
@@ -29,7 +29,6 @@ docker-compose up -d
 ```
 - http://localhost:8000/ にアクセスします。
 - ctrl + Cまたは `docker-compose down`でコンテナを停止できます。
-
 <br>
 <br>
 

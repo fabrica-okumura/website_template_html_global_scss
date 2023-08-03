@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <?php
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
     $host = $_SERVER['HTTP_HOST'];
-    $base_url = "https://$host/";
+    $base_url = $protocol . $host . '/';
     $site_title="ダミーカンパニー";
     ?>
 

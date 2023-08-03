@@ -16,7 +16,7 @@
 cd hoge
 #ファイルのダウンロード
 git clone git@github.com:fabrica-okumura/website_template_html_global_scss.git
-#ダウンロードしたディレクトリに移動
+#ダウンロードした作業ディレクトリに移動
 cd yourrepository
 #必要なパッケージをインストール
 npm i
@@ -31,7 +31,7 @@ docker-compose up -d
 
 # .scssファイルの編集とCSSのコンパイル
 CSSのコンパイルはgulpを使用します。
-- 作業開始前にタスクの実行を開始します。
+- 新しいターミナルウィンドウを開き、作業ディレクトリでgulpタスクの実行を開始します。
 ```bash
 npx gulp
 ```

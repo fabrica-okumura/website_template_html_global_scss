@@ -7,4 +7,4 @@ services:
             - .:/var/www/html
         ports:
             - 8000:80
-        container_name: web-frontend-php7.2
+        container_name: okumura-web-frontend-php7.2

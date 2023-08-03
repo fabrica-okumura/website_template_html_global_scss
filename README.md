@@ -10,7 +10,7 @@
 <br>
 
 # 環境設定
-- 事前に開発環境にGit、Node.js、npm、Dockerアプリのインストールをおこなってください。
+事前に開発環境へGit、Node.js、npm、Dockerアプリのインストールをおこなってください。
 ```bash
 #ファイルをダウンロードする任意のディレクトリに移動
 cd yourdirectory
@@ -21,21 +21,23 @@ cd yourrepository
 #必要なパッケージをインストール
 npm i
 ```
-- Dockerアプリを起動したのちDockerコンテナを起動します。
+Dockerアプリを起動したのちDockerコンテナを起動します。
 ```bash
 docker-compose up -d
 ```
-- http://localhost:8000/ にアクセスします。
-- `docker-compose down`でコンテナを停止できます。
+http://localhost:8000/ にアクセスします。
+
+`docker-compose down`でコンテナを停止できます。
 <br>
 
 # .scssファイルの編集とCSSのコンパイル
 CSSのコンパイルはgulpを使用します。
-- 新しいターミナルウィンドウを開き、作業ディレクトリでgulpタスクの実行を開始します。
+
+新しいターミナルウィンドウを開き、作業ディレクトリでgulpタスクの実行を開始します。
 ```bash
 npx gulp
 ```
-- ctrl + C でタスクを停止できます。
+ctrl + C でタスクを停止できます。
 <br>
 
 # CSS設計

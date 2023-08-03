@@ -13,8 +13,8 @@
 - 開発環境にgit、node.js、npm、Dockerアプリがインストールされていることが前提です。ない場合はインストールしてください。
 ```bash
 #ファイルをダウンロードする任意のディレクトリに移動
-cd hoge
-#ファイルのダウンロード
+cd yourdirectory
+#リポジトリをclone
 git clone git@github.com:fabrica-okumura/website_template_html_global_scss.git
 #ダウンロードした作業ディレクトリに移動
 cd yourrepository
@@ -26,7 +26,7 @@ npm i
 docker-compose up -d
 ```
 - http://localhost:8000/ にアクセスします。
-- ctrl + Cまたは `docker-compose down`でコンテナを停止できます。
+- `docker-compose down`でコンテナを停止できます。
 <br>
 
 # .scssファイルの編集とCSSのコンパイル

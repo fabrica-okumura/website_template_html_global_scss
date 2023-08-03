@@ -48,14 +48,9 @@ const cssSass = () => {
     .pipe(notify({ message: "Compiled Sass successfully.", onLast: true }))
 }
 
-// const watchSassFiles = () => {
-//   gulp.watch(srcPath.scss, cssSass)
-// }
-const watchSassFiles = (done) => {
-  gulp.watch(srcPath.scss, cssSass);
-  done();
+const watchSassFiles = () => {
+  gulp.watch(srcPath.scss, cssSass)
 }
-
 
 module.exports = {
   cssSass,

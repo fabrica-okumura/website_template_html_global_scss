@@ -26,14 +26,6 @@ a {
   color: $text_link_color;
   text-decoration: none;
 }
-button {
-  vertical-align: middle;
-  //クリック時にずれないための設定。
-  padding: 0;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-}
 img {
   max-width: 100%;
   height: auto;

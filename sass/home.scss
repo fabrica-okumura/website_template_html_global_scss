@@ -1,11 +1,11 @@
-@use "../global" as *;
+@use "./global" as *;
 .s-hero {
   // 固定ヘッダー分スペースを取る。
   margin-top: 5.4rem;
   background: $theme_200;
   padding: $space_lg 0;
   margin-bottom: $space_4xl;
-
+  background: blue;
   @media #{$pc} {
     margin-top: 9rem;
     padding: $space_3xl 0;

@@ -32,20 +32,20 @@
     display: none;
     @media #{$pc} {
       display: block;
-      margin-right: $space_sm;
-      ul {
-        display: flex;
-        li {
-          white-space: nowrap;
-          margin: 0 1.4rem;
-          a {
-            color: inherit;
-            font-size: $fs;
-            font-weight: bold;
-            &:hover {
-              color: $theme_900;
-              text-decoration: none;
-            }
+    }
+    margin-right: $space_sm;
+    ul {
+      display: flex;
+      li {
+        white-space: nowrap;
+        margin: 0 1.4rem;
+        a {
+          color: inherit;
+          font-size: $fs;
+          font-weight: bold;
+          &:hover {
+            color: $theme_900;
+            text-decoration: none;
           }
         }
       }
@@ -77,7 +77,7 @@
       &:nth-child(3) {
         transform: translateY(0.6rem);
       }
-      .is-show_sp_menu &{
+      .is-show_sp_menu & {
         &:nth-child(1) {
           transform: rotate(45deg);
         }
@@ -104,7 +104,7 @@
     @media #{$pc} {
       display: none;
     }
-    .is-show_sp_menu &{
+    .is-show_sp_menu & {
       height: 100%;
     }
     ul {

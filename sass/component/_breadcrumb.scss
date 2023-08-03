@@ -23,7 +23,7 @@
       }
     }
     &:last-of-type {
-      @media #{$pc}{
+      @media #{$pc} {
         max-width: 70rem;
         overflow: hidden;
         text-overflow: ellipsis;

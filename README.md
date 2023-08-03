@@ -1,4 +1,4 @@
-グローバルCSSを使用してウェブサイト開発を始めるための基本的なHTML、CSS（SASS）、JavaScriptのファイルセットです。
+グローバルCSSを使用してウェブサイト開発を始めるための基本となるHTML、CSS（SASS）、JavaScriptのファイルセットです。
 
 ブラウザでの表示確認は、https://web-template-html-global-scss.onrender.com/ にアクセスしてください。
 <br>
@@ -10,7 +10,37 @@
 - PHPで一部コンポーネントの読み込みをおこなっています。
 <br>
 <br>
+# 環境設定
+- 開発環境にgit、node.js、npm、Dockerアプリがインストールされていることが前提です。ない場合はインストールしてください。
+```bash
+//ファイルをダウンロードする任意のディレクトリに移動
+cd hoge
+//ファイルのダウンロード
+git clone https://github.com/yourusername/yourrepository.git
+//ダウンロードしたディレクトリに移動
+cd yourrepository
+//必要なパッケージをインストール
+npm i
+```
+- Dockerアプリを起動したのちDockerコンテナを起動します。
+```bash
+docker-compose up -d
+```
+- http://localhost:8000/ にアクセスします。
+- ctrl + Cまたは `docker-compose down`でコンテナを停止できます。
 
+<br>
+<br>
+
+# Scssの編集とCSSファイルのコンパイル
+CSSのコンパイルはgulpを使用します。
+- 作業開始前にタスクの実行を開始します。
+```bash
+npx gulp
+```
+- ctrl + C で停止できます。
+<br>
+<br>
 # CSS設計
 グローバルCSSを使用する場合、それらを適切に管理しないとスタイルの競合や予期しない表示崩れなどが発生する可能性があるため、メンテナンス性や拡張性を意識したCSS設計が必要となります。ここでは[FLOCSS](https://github.com/hiloki/flocss)の設計手法を基本とし、独自のルールを追加して定義しています。
 <br>
@@ -29,7 +59,7 @@
 |Component|c-|再利用ができる最も小さなモジュールのスタイルを定義。グリッド、見出し、ボタン、ナビゲーション、ページネーション、カードなど。|grid/heading/button/card/media...|
 |Project|p-|いくつかのComponentとElementで構成されるものを定義。記事一覧、ユーザープロフィール、画像ギャラリーなどのコンテンツを構成する要素のかたまりなど。|articles/ranking/promo...|
 |Utility|u-|プロパティ単体での指定を補助するもの。単一の機能を持つヘルパーモジュールを定義。|margin/size/text...|
-|Single|s-|ページ個別で使用されるスタイルのファイルを定義。singleディレクトリに各ファイルを格納する。|home.scss/about.scss/form.scss...|
+|Single|s-|ページ個別で使用されるスタイルのファイルを定義。|home.scss/about.scss/form.scss...|
 |External|なし|swiperなどの外部ライブラリを使用しており、それらのCSSを上書きする必要がある場合のファイルを定義。externalディレクトリに各ファイルを格納する。|swiper_overrides.scss...|
 <br>
 <br>

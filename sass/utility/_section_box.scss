@@ -1,18 +1,18 @@
 @use "../global" as *;
 
-.u-section{
+.u-section {
   // 背景色ありのblock用。
   padding-top: $space_4xl;
   padding-bottom: $space_4xl;
   // block内最後のコンテンツを強制的にmargin-bottom:0にする。
-  *:last-child{
+  *:last-child {
     margin-bottom: 0 !important;
   }
   // 背景色のないsectionが続く場合以下を追加する。
-  &.--pb0{
+  &.--pb0 {
     padding-bottom: 0;
   }
-  @media #{$pc}{
+  @media #{$pc} {
     padding-top: $space_9xl;
     padding-bottom: $space_9xl;
   }

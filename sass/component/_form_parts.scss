@@ -65,9 +65,12 @@ select.c-input {
 }
 
 input[type="checkbox"].c-checkbox {
-  display: none;
+  // Tabキーによるフォーカスができなくなるためdisplay: noneにしない。
+  opacity: 0;
+  width: 0;
+  height: 0;
   & + * {
-    // checkbox.c-checkboxの後ろにspanを配置し、labelで囲む。
+    // .c-checkboxの後ろにspanを配置し、labelで囲む。
     // <label><input type="checkbox" class="c-checkbox"><span>ラベルテキスト</span></label>
     display: inline-flex;
     align-items: center;
@@ -105,9 +108,12 @@ input[type="checkbox"].c-checkbox {
 }
 
 input[type="radio"].c-radio {
-  display: none;
+  // Tabキーによるフォーカスができなくなるためdisplay: noneにしない。
+  opacity: 0;
+  width: 0;
+  height: 0;
   & + * {
-    // radio.c-radioの後ろにspanを配置し、labelで囲む。
+    // .c-radioの後ろにspanを配置し、labelで囲む。
     // <label><input type="radio" class="c-radio"><span>ラベルテキスト</span></label>
     display: inline-flex;
     align-items: center;

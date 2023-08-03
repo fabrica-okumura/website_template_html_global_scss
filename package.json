@@ -1,0 +1,31 @@
+{
+  "name": "website_template_html_global_scss",
+  "version": "1.0.0",
+  "description": "グローバルCSSを使用してウェブサイト開発を始めるための基本的なHTML、CSS（SASS）、JavaScriptのファイルセットです。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabrica-okumura/website_template_html_global_scss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabrica-okumura/website_template_html_global_scss/issues"
+  },
+  "homepage": "https://github.com/fabrica-okumura/website_template_html_global_scss#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "postcss-merge-queries": "^1.0.3",
+    "postcss-merge-rules": "^6.0.1"
+  }
+}

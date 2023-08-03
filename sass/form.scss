@@ -1,15 +1,13 @@
-@use "../global" as *;
+@use "./global" as *;
 .s-form {
   display: grid;
   gap: $space;
-
   @media #{$pc} {
     gap: $space_xl;
     border: 0.3rem solid $gray_300;
     border-radius: 2rem;
     padding: 8rem;
   }
-
   > dl {
     dt {
       font-size: 1.8rem;
@@ -28,7 +26,6 @@
       }
     }
   }
-
   &__btn_list {
     display: grid;
     gap: 0.9rem;
@@ -38,13 +35,10 @@
     }
   }
 }
-
 .s-form_btn_area {
   text-align: center;
-
   .c-btn_primary {
     width: 100%;
-
     @media #{$pc} {
       width: 50rem;
     }

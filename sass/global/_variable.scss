@@ -18,17 +18,18 @@ $bp_3xl: "1400px";
 // ==========================================================================
 //メディアクエリ設定。
 // スマートフォン基準のためsp設定はなし。
-$tb: "only screen and (min-width:#{$bp}) and (max-width:#{$bp_lg})";
-$until_tb: "only screen and (max-width:#{$bp_lg})";
-$over_tb: "only screen and (min-width:#{$bp_lg})";
-$pc: "only screen and (min-width:#{$bp_xl})";
-$pc_lg: "only screen and (min-width:#{$bp_2xl})";
-$pc_xl: "only screen and (min-width:#{$bp_3xl})";
+$tb: "screen and (min-width:#{$bp}) and (max-width:#{$bp_lg}), print";
+$until_tb: "screen and (max-width:#{$bp_lg}), print";
+$over_tb: "screen and (min-width:#{$bp_lg}), print";
+$pc: "screen and (min-width:#{$bp_xl}), print";
+$pc_lg: "screen and (min-width:#{$bp_2xl}), print";
+$pc_xl: "screen and (min-width:#{$bp_3xl}), print";
 
 // ==========================================================================
 // body font-family
 // ==========================================================================
-$body_font_family: 'Hiragino Sans', 'Meiryo', 'Hiragino Kaku Gothic ProN', sans-serif;
+$body_font_family: "Hiragino Sans", "Meiryo", "Hiragino Kaku Gothic ProN",
+  sans-serif;
 // $body_font_family:"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 
 // ==========================================================================
@@ -39,50 +40,50 @@ $body_text_color: #000;
 // ==========================================================================
 // text link color
 // ==========================================================================
-$text_link_color: #008EC1;
+$text_link_color: #008ec1;
 
 // ==========================================================================
 // color
 // ==========================================================================
 // テーマカラーなど多用するカラーを設定。
-$theme_50: #F4FCFE;
-$theme_100: #EDFBFD;
-$theme_200: #E1F8FB;
-$theme_300: #C8F0F8;
-$theme_400: #AEE7F4;
-$theme_500: #7BD5EC;
-$theme_600: #38C6ED;
-$theme_700: #14B2DD;
-$theme_800: #0197D0;
-$theme_900: #008EC1;
+$theme_50: #f4fcfe;
+$theme_100: #edfbfd;
+$theme_200: #e1f8fb;
+$theme_300: #c8f0f8;
+$theme_400: #aee7f4;
+$theme_500: #7bd5ec;
+$theme_600: #38c6ed;
+$theme_700: #14b2dd;
+$theme_800: #0197d0;
+$theme_900: #008ec1;
 
-$accent_50: #FFEAE7;
-$accent_100: #FFD4CE;
-$accent_500: #F58271;
-$accent_900: #E6533E;
+$accent_50: #ffeae7;
+$accent_100: #ffd4ce;
+$accent_500: #f58271;
+$accent_900: #e6533e;
 
-$gray_50: #F9FAFA;
-$gray_100: #F5F6F6;
-$gray_200: #ECEDED;
-$gray_300: #E0E2E3;
-$gray_400: #CED1D2;
-$gray_500: #9EA3A5;
-$gray_600: #82888B;
-$gray_700: #636B6F;
-$gray_800: #3E484D;
+$gray_50: #f9fafa;
+$gray_100: #f5f6f6;
+$gray_200: #eceded;
+$gray_300: #e0e2e3;
+$gray_400: #ced1d2;
+$gray_500: #9ea3a5;
+$gray_600: #82888b;
+$gray_700: #636b6f;
+$gray_800: #3e484d;
 $gray_900: #303538;
 
-$theme_grad_700: linear-gradient(90deg, #4CCAEC 0%, #0197D0 100%);
-$theme_grad_800: linear-gradient(90deg, #38C6ED 0%, #14B2DD 100%);
-$theme_grad_900: linear-gradient(90deg, #14B2DD 0%, #008EC1 100%);
+$theme_grad_700: linear-gradient(90deg, #4ccaec 0%, #0197d0 100%);
+$theme_grad_800: linear-gradient(90deg, #38c6ed 0%, #14b2dd 100%);
+$theme_grad_900: linear-gradient(90deg, #14b2dd 0%, #008ec1 100%);
 
-$accent_grad_800: linear-gradient(90deg, #F7A59B 0%, #EF705E 100%);
-$accent_grad_900: linear-gradient(90deg, #F48171 0%, #E54B3E 100%);
+$accent_grad_800: linear-gradient(90deg, #f7a59b 0%, #ef705e 100%);
+$accent_grad_900: linear-gradient(90deg, #f48171 0%, #e54b3e 100%);
 
 // ==========================================================================
 // shadow color
 // ==========================================================================
-$shadow_color: rgba(0, 0, 0, .2);
+$shadow_color: rgba(0, 0, 0, 0.2);
 
 $shadow_xs: 0 0 2rem $shadow_color;
 $shadow_sm: 0 0 4rem $shadow_color;
@@ -92,16 +93,16 @@ $shadow: 0 0 6rem $shadow_color;
 // animation
 // ==========================================================================
 //hover
-$ani_all: all .2s ease-out;
+$ani_all: all 0.2s ease-out;
 // hover opacity only
-$ani_opacity: opacity .2s ease-out;
+$ani_opacity: opacity 0.2s ease-out;
 
 // ==========================================================================
 // space
 // ==========================================================================
 // margin/paddingのスペースを定義。
 // .8rem〜10.4remまで設定。
-$space_std: .8rem;
+$space_std: 0.8rem;
 
 $space_xs: $space_std;
 $space_sm: $space_std * 2;

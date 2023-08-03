@@ -116,7 +116,7 @@ $page="home";
 
       <h3 class="c-title_secondary">リンク</h3>
       <p class="u-mb">
-        テキストテキスト<a href="">セレクタ名なしリンク</a>テキストテキスト<a href="" class="c-link">リンク</a>テキストテキスト<a href="" class="c-link_blank"><span>リンク_blank</span></a>テキストテキスト
+        テキストテキスト<a href="">クラス指定なしのリンク</a>テキストテキスト<a href="" class="c-link">リンク</a>テキストテキスト<a href="" class="c-link_blank"><span>リンク_blank</span></a>テキストテキスト
       </p>
       <p class="u-mb">
       <a href="" class="c-link_arrow"><span>矢印リンク</span></a>テキストテキスト

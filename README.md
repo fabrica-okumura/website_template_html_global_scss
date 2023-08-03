@@ -16,7 +16,7 @@
 cd yourdirectory
 #リポジトリをclone
 git clone git@github.com:fabrica-okumura/website_template_html_global_scss.git
-#ダウンロードした作業ディレクトリに移動
+#cloneした作業ディレクトリに移動
 cd yourrepository
 #必要なパッケージをインストール
 npm i
